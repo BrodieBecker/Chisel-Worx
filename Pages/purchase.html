@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase - Chisel Worx</title>
+    <link rel="icon" href="../Images/Logos/chisel worx logo.jpg" type="image/jpg">
+
+    <!-- JavaScript -->
+    <script src="../JavaScript/main.js"></script>
+
+    <!-- FONTS -->
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Patua+One&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/e15712f0f0.js" crossorigin="anonymous"></script>
+
+    <!-- Internal stylesheets -->
+    <link rel="stylesheet" href="../Styles/Global/navigation.css">
+    <link rel="stylesheet" href="../Styles/Global/main.css">
+    <link rel="stylesheet" href="../Styles/Global/media-queries.css">
+    <link rel="stylesheet" href="../Styles/Global/main.css">
+    <link rel="stylesheet" href="../Styles/Global/forms.css">
+    <link rel="stylesheet" href="../Styles/purchase.css">
+</head>
+
+<body>
+
+    <!-- Menu/header (all pages) -->
+
+    <div class="menu">
+        <div class="logo">
+            <a href="../index.html"><img src="../Images/Logos/chisel worx logo.jpg" alt="Chisel Workx Logo"></a>
+        </div>
+        <div class="title">
+            <h1>Chisel Worx</h1>
+        </div>
+        <div class="buttons-wrapper">
+            <div class="button">
+                <a href="about.html">About Us</a>
+            </div>
+            <div class="button">
+                <a href="products.html">Our Products</a>
+            </div>
+            <div class="button">
+                <a href="purchase.html">Purchase</a>
+            </div>
+            <div class="button">
+                <a href="how-to.html">How To</a>
+            </div>
+            <div class="button">
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="content" id="purchase-content">
+
+        <div class="purchase-options">
+            <h2>Purchase</h2>
+            <h3 id="shipping-note"><i class="fas fa-exclamation-triangle"></i> Please Note <i
+                    class="fas fa-exclamation-triangle"></i></h3>
+            <h3 id="shipping-note">As of now, we only offer shipping in the state of Idaho</h3>
+            <h3>You can purchase our products by:</h3>
+            <ul>
+                <li>Visiting our <a href="https://www.facebook.com/ChiselWorx" target="blank">Facebook</a> page</li>
+                <li>Calling 555-555-5555</li>
+                <li>E-Mailing stuma246810@gmail.com</li>
+                <li>Contacting us via the form below.</li>
+            </ul>
+        </div>
+
+        <div class="form">
+            <!-- Name -->
+            <div class="form-group">
+                <input type="text" id="firstName" placeholder="First Name">
+                <label for="firstName">First Name</label>
+            </div>
+            <div class="form-group">
+                <input type="text" id="lastName" placeholder="Last Name">
+                <label for="lastName">Last Name</label>
+            </div>
+
+            <!-- Contact -->
+            <div class="form-group">
+                <input type="tel" id="purchasePhone" placeholder="Phone">
+                <label for="purchasePhone">Phone</label>
+            </div>
+            <div class="form-group">
+                <input type="email" id="purchaseEmail" placeholder="Email">
+                <label for="purchaseEmail">Email</label>
+            </div>
+
+            <!-- Shipping -->
+            <div class="form-group">
+                <input type="text" id="streetNum" placeholder="Shipping Address">
+                <label for="streetNum">Shipping Address - Number, Street, City</label>
+            </div>
+            <div class="form-group">
+                <input type="text" id="zipCode" placeholder="Zip Code">
+                <label for="zipCode">Zip Code</label>
+            </div>
+            <!-- Optional Message -->
+            <div class="form-group">
+                <textarea name="message" id="message"
+                    placeholder="Message - What would you like to purchase?"></textarea>
+                <label for="message">Message - What would you like to purchase?</label>
+            </div>
+
+            <div class="purchaseButton">
+                <script language="JavaScript" type="text/javascript">
+                    var name, email, phone, message;
+
+                    function sendEmail(message) {
+
+                        //Retrieving form data and assigning to variables
+
+                        //Info
+                        var name = document.getElementById("firstName").value + ' ' + document.getElementById("lastName").value;
+                        var email = document.getElementById("purchaseEmail").value;
+                        var phone = document.getElementById("purchasePhone").value;
+
+                        //Purchase
+                        var address = document.getElementById("streetNum").value;
+                        var zipCode = document.getElementById("zipCode").value;
+
+                        //Message
+                        message = document.getElementById("message").value;
+
+                        //Creating email text
+                        subject = name + " submitted a PURCHASE FORM"
+                        body = "Message: " + '%0D%0A' + '%0D%0A' + message + '%0D%0A' + '%0D%0A' + "Address: " + address + ' ' + zipCode + '%0D%0A' + "Contact:" + '%0D%0A' + "     Email: " + email + '%0D%0A' + "     Phone: " + phone + '%0D%0A';
+
+                        //Opening & prefilling email client
+                        document.location = "mailto:" + "stuma246810@gmail.com" + "?subject=" + subject + "&body=" + body;
+                    }
+                </script>
+
+                <button class="formSubmitButton" onClick="sendEmail(message)">Submit Form</button>
+            </div>
+        </div>
+    </div>
+</body>

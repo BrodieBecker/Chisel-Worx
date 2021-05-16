@@ -1,0 +1,23 @@
+.paralax {
+    background-image: url(../Images/Logos/Chisel\ Workx\ Logo\ Board\ 2.jpg);
+    height: 300px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content > .story {
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.content > .story h2{
+    font-family: Patua One, cursive;
+}
+.content > .story p {
+    font-family: Lato, sans-serif;
+    font-weight: 450;
+    line-height: 24px;
+}

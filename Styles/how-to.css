@@ -1,0 +1,23 @@
+.videos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.videos > .video {
+    width: 200px;
+    height: 300px;
+    margin: 30px;
+    background-color: transparent;
+}
+
+.subscribe {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.subscribe p {
+    font-family: Lato, sans-serif;
+}

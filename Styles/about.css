@@ -1,0 +1,8 @@
+.content > .introduction {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.content > .introduction p {
+    font-size: 1.25em;
+}

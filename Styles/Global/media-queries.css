@@ -1,0 +1,95 @@
+
+/* Styles for displays narrower than 750px */
+@media (max-width: 750px) {
+
+/* General styles */
+
+
+    /* Navigation */
+    .menu {
+        flex-direction: column;
+        justify-content: center;
+        align-items: space-around;
+        height: 220px;
+    }
+
+    .menu > .buttons-wrapper {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        margin: 20px;
+        width: 90%;
+    }
+
+    .menu > .buttons-wrapper a {
+        font-size: 1em;
+    }
+
+    .menu > .title h1 {
+        font-size: 1em;
+    }
+
+    .menu > .logo {
+        margin-top: 30px;
+    }
+
+    .menu > .logo img {
+        width: 50px;
+        height: 50px;
+        padding: 0;
+        margin: 0;
+    }
+
+
+    /* Homepage */
+
+    .content {
+        margin-top: 210px;
+        margin-bottom: 50px;
+    }
+
+    .paralax {
+        height: 300px;
+        background-size: contain;
+    }
+
+    /* About Us */
+    #about-us-content {
+        text-align: center;
+    }
+
+    /* Products */
+    #products-content > .more-products-custom-orders {
+        width: 90%;
+    }
+
+    /* Purchase */
+    #purchase-content > .purchase-options {
+        width: 90%;
+    }
+    #purchase-content > .form input {
+        width: 65%;
+    }
+    #purchase-content > .form textarea {
+        width: 65%;
+    }
+
+    /* Contact */
+    #contact-content > .form input {
+        width: 85%;
+    }
+
+    #contact-content > .form textarea {
+        width: 85%;
+    }
+
+    /* How-To */
+    #how-to-content > .videos {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #how-to-content > .video {
+        margin: 0;
+        padding: 0;
+    }
+}
